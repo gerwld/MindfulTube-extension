@@ -1,0 +1,305 @@
+/* //   - This file is part of MindfulTube Extension
+//  <https://github.com/gerwld/MindfulTube-extension/blob/main/README.md>,
+//   - Copyright (C) 2019-present MindfulTube Extension, Inc.
+//   -
+//   -MindfulTube Extension is free software: you can redistribute it and/or modify
+//   - it under the terms of the Creative Commons Attribution-NonCommercial 4.0 International (CC BY-NC 4.0) License.
+//   -
+//   -MindfulTube Extension is distributed in the hope that it will be useful,
+//   - but WITHOUT ANY WARRANTY; without even the implied warranty of
+//   - MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+//   - Creative Commons Attribution-NonCommercial 4.0 International (CC BY-NC 4.0) License for more details.
+//   -
+//   - You should have received a copy of the Creative Commons Attribution-NonCommercial 4.0 International (CC BY-NC 4.0) License
+//   - along withMindfulTube Extension.  If not, see <https://creativecommons.org/licenses/by-nc/4.0/>. */
+
+:root {
+  --main-border: 1px solid #b8b8b8;
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans",
+    "Helvetica Neue", sans-serif;
+  background-color: #f8fafc;
+  width: 600px;
+  height: fit-content;
+  user-select: none;
+  font-size: 16px;
+}
+
+body {
+  position: relative;
+  box-sizing: border-box;
+}
+
+input[disabled="true"],
+input:disabled {
+  opacity: 0.5 !important;
+  user-select: none;
+}
+
+input[disabled="true"] + .ch_sp,
+input:disabled + .ch_sp,
+input:disabled + .ch_sp::before {
+  opacity: 0.5 !important;
+  user-select: none;
+  cursor: default;
+}
+
+img {
+  user-select: none;
+  pointer-events: none;
+}
+
+.logo {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  justify-content: center;
+  word-wrap: nowrap;
+  white-space: nowrap;
+  padding: 10px;
+}
+.logo_img {
+  height: 50px;
+  padding-right: 10px;
+}
+.logo_title {
+  font-size: 1.2rem;
+  line-height: 1.2rem;
+  font-weight: 500;
+}
+
+.header {
+  margin-bottom: 20px;
+  border-bottom: var(--main-border);
+  user-select: none;
+}
+
+#l3_settings {
+  display: flex;
+}
+
+.group {
+  flex: 1;
+}
+
+.group:nth-child(2) {
+  flex: 1.1;
+}
+
+.links {
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  padding: 5px 10px 10px;
+  border-top: var(--main-border);
+}
+
+.links button,
+.links a {
+  display: block;
+  padding: 3px 5px;
+  margin: 0 0 0 5px;
+  max-width: 170px;
+  color: #000;
+  border: none;
+  font-size: 0.9rem;
+  text-decoration: none;
+  background-color: transparent;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background 50ms ease, color 50ms ease;
+}
+
+.links button:hover,
+.links a:hover {
+  background-color: #353639;
+  color: #fff;
+}
+
+a.version {
+  display: block;
+  padding: 3px 5px;
+  margin: 0 auto 0 0;
+  color: gray;
+  text-decoration: none;
+  border-radius: 3px;
+  font-size: 0.8rem;
+}
+
+a img {
+  object-fit: contain;
+  width: 100%;
+}
+
+.sect_lable {
+  display: block;
+  margin: 0 10px 5px;
+  padding-bottom: 5px;
+
+  color: #333637;
+  font-size: 0.75rem;
+  border-bottom: 1px solid #caced3;
+}
+
+.sect_lable__color {
+  padding-top: 20px;
+}
+
+.ch_lp {
+  display: block;
+  padding: 0 10px 0;
+  margin-bottom: 10px;
+}
+
+.ch_lp .label {
+  display: block;
+  margin-bottom: 2px;
+  font-size: 0.72rem;
+}
+
+.ch_lp select {
+  display: block;
+  width: 100%;
+  height: 26px;
+  box-sizing: border-box;
+  border-radius: 0;
+  border-color: #a3acb1;
+  background-color: #fff;
+  font-size: 0.8rem;
+  line-height: 0.8rem;
+}
+
+.ext_content {
+  padding: 20px;
+}
+
+.ext_content h1 {
+  font-size: 1.4rem;
+  margin: 0.8rem 0 1rem;
+}
+
+.ext_content p {
+  margin: 0;
+  line-height: 140%;
+}
+
+.ext_content ul {
+  padding: 0 0 0 1rem;
+  line-height: 160%;
+}
+
+.donate_nav {
+  width: 60%;
+  padding: 20px 0;
+  margin: 0 auto;
+}
+
+.donate_nav a {
+  display: block;
+  padding: 14px 10px;
+  color: #ffffff;
+  border: 2px solid #315d96;
+  background-color: #3c74bd;
+  margin-bottom: 10px;
+  text-decoration: none;
+  text-align: center;
+  border-radius: 5px;
+}
+
+.donate_nav a:nth-last-child(1) {
+  margin: 0;
+}
+
+.donate_nav a:hover {
+  background-color: #2b5081;
+}
+
+.back_btn {
+  color: #000;
+  font-weight: 600;
+  text-decoration: none;
+  padding: 5px;
+  margin-left: -2px;
+  border-radius: 5px;
+}
+
+.back_btn:hover {
+  background-color: #353639;
+  color: #fff;
+}
+
+/* ----------------------- checkbox styles ----------------------- */
+
+.ch_ip {
+  display: flex;
+  position: relative;
+  padding: 0 0 0 33px;
+  margin: 0 0 14px 10px;
+
+  vertical-align: middle;
+  user-select: none;
+  pointer-events: contain;
+  font-size: 0.84rem;
+}
+
+/* Hide the browser's default checkbox */
+.ch_ip input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+  margin-top: -1px;
+}
+
+/* Create a custom checkbox */
+.ch_sp {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 14px;
+  width: 25px;
+  background-color: transparent;
+  border: 1px solid #8a8d92;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: background-color 100ms ease;
+}
+
+/* When the checkbox is checked, add a blue background */
+.ch_ip input:checked ~ .ch_sp {
+  background-color: #228ad7;
+  border-color: #197dc9;
+}
+
+.ch_ip input:checked:hover ~ .ch_sp {
+  background-color: #2076b8;
+  border-color: #197dc9;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.ch_sp:after {
+  content: "";
+  position: absolute;
+  display: block;
+  top: 1px;
+  left: 1px;
+  width: 12px;
+  height: 12px;
+  background-color: #8a8d92;
+  border-radius: 50%;
+  transition: left 100ms ease;
+}
+
+/* Move the checkmark when checked */
+.ch_ip input:checked ~ .ch_sp:after {
+  left: 12px;
+  background-color: #fff;
+}
+
+/* ----------------------- checkbox styles end ----------------------- */

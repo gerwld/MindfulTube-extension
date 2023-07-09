@@ -1,0 +1,41 @@
+{
+  "name": "MindfulTube - Delete YouTube Recommended Videos",
+  "description": "Enhance your Instagram experience with InstaPlus.",
+  "version": "1.0.0",
+  "manifest_version": 3,
+  "icons": {
+    "32": "/assets/img/icons/icon32.png",
+    "128": "/assets/img/icons/icon128.png"
+  },
+  "background": {
+    "service_worker": "/assets/js/background.js"
+  },
+  "action": {
+    "default_popup": "/assets/js/popup.html",
+    "default_icon": {
+      "32": "/assets/img/icons/icon32.png",
+      "128": "/assets/img/icons/icon128.png"
+    }
+  },
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "store.js",
+        "assets/css/classic_mode.css",
+        "assets/css/square_shaped.css",
+        "assets/css/disable_vanity.css"
+      ],
+      "matches": ["<all_urls>"]
+    }
+  ],
+  "content_scripts": [
+    {
+      "all_frames": true,
+      "css": ["/assets/css/main.css"],
+      "js": ["/assets/js/contentScript.js"],
+      "matches": ["https://www.youtube.com/*", "https://m.youtube.com/*"],
+      "run_at": "document_start"
+    }
+  ],
+  "permissions": ["storage"]
+}
